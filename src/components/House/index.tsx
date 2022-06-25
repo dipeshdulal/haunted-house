@@ -1,6 +1,7 @@
 export const House = () => {
     return (
         <group>
+            <pointLight position={[0, 2.5, 2.5]} args={["#977efc", 1, 4, 1]} />
             <mesh position={[0, 1, 2]}>
                 <planeBufferGeometry args={[1, 2]} />
                 <meshStandardMaterial color="#b85209" polygonOffset polygonOffsetFactor={-1} />
