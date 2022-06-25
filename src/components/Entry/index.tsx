@@ -2,6 +2,7 @@ import { OrbitControls } from "@react-three/drei";
 import { useThree } from "@react-three/fiber"
 import { useEffect, useRef } from "react"
 import { Color } from "three";
+import { Graves } from "../Graves";
 import { House } from "../House";
 import { Lights } from "../Lights";
 
@@ -19,6 +20,7 @@ export const Entry = () => {
                 <meshStandardMaterial color="#8cfa7d" />
             </mesh>
             <House />
+            <Graves />
             <Lights />
             <OrbitControls makeDefault maxPolarAngle={Math.PI / 2} minPolarAngle={0} />
         </>
