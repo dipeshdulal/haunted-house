@@ -1,6 +1,6 @@
 import { OrbitControls } from "@react-three/drei";
 import { useThree } from "@react-three/fiber"
-import { useEffect, useMemo, useRef } from "react"
+import { useEffect, useMemo } from "react"
 import { Color, Fog } from "three";
 import { Graves } from "../Graves";
 import { House } from "../House";
@@ -19,7 +19,7 @@ export const Entry = () => {
         <>
             <mesh rotation={[-Math.PI / 2, 0, 0]}>
                 <planeBufferGeometry args={[100, 100]} />
-                <meshStandardMaterial color="#8cfa7d" />
+                <meshStandardMaterial color="#d7ffd1" />
             </mesh>
             <House />
             <Graves />
