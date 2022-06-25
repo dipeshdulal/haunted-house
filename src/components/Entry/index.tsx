@@ -1,16 +1,18 @@
 import { OrbitControls } from "@react-three/drei";
 import { useThree } from "@react-three/fiber"
-import { useEffect, useRef } from "react"
-import { Color } from "three";
+import { useEffect, useMemo, useRef } from "react"
+import { Color, Fog } from "three";
 import { Graves } from "../Graves";
 import { House } from "../House";
 import { Lights } from "../Lights";
 
 export const Entry = () => {
-    const { gl, camera } = useThree();
+    const { gl, camera, scene } = useThree();
+    const fog = useMemo(() => new Fog("#262837", 1, 10), []);
     useEffect(() => {
-        gl.setClearColor(new Color('black'))
+        gl.setClearColor(new Color('#262837'))
         camera.position.set(3, 2, 7)
+        scene.fog = fog;
     }, [])
 
     return (
